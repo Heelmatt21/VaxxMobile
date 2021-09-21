@@ -100,7 +100,6 @@ public class App {
         DFS(graph, new Vertex("B", "RGD Meerzorg"));
 
         //BFS
-        //Call Breadth first search method to do a search..
         System.out.println("\n");
         System.out.println("Output of Breadth First Search: ");
         BFS(graph, new Vertex("A", "BOG"));
