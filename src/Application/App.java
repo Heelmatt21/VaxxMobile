@@ -78,7 +78,7 @@ public class App {
         Dijkstra Path = new Dijkstra();
         Path.computePaths(vertexA);
 
-
+        System.out.println("\n");
         System.out.println("Dijkstra");
         System.out.println("Minimale Afstanden: ");
 
