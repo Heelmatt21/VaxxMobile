@@ -6,11 +6,11 @@ public class Edge {
     private Vertex startVertex;
     private Vertex endVertex;
 
-    public Edge(String id, double weight, Vertex startVertex, Vertex targetVertex) {
+    public Edge(String id, double weight, Vertex startVertex, Vertex endVertex) {
         this.id = id;
         this.weight = weight;
         this.startVertex = startVertex;
-        this.endVertex = targetVertex;
+        this.endVertex = endVertex;
     }
     public Edge() {
 

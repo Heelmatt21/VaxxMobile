@@ -37,10 +37,10 @@ public class Dijkstra {
         }
     }
 
-    public List<Vertex> getPathTo(Vertex targetVertex) {
+    public List<Vertex> getPathTo(Vertex endVertex) {
         List<Vertex> path = new ArrayList<>();
 
-        for (Vertex vertex = targetVertex; vertex != null; vertex = vertex.getPredecessor()) {
+        for (Vertex vertex = endVertex; vertex != null; vertex = vertex.getPredecessor()) {
             path.add(vertex);
         }
 

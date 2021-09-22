@@ -56,19 +56,19 @@ public class App {
         System.out.println("\n");
         System.out.println("Check als vertexes aan elkaar verbonden zijn: ");
         if (graph.isConnected(vertexA, vertexB))
-            System.out.println("BOG and RGD Meerzorg zijn verbonden!");
+            System.out.println(vertexA + " en " + vertexB + " zijn verbonden!");
         else
-            System.out.println("BOG and RGD Meerzorg zijn niet verbonden!");
+            System.out.println(vertexA + " en " + vertexB + " zijn niet verbonden!");
 
         if (graph.isConnected(vertexA, vertexE))
-            System.out.println("BOG and RGD Latour zijn verbonden!");
+            System.out.println(vertexA + " en " + vertexE + " zijn verbonden!");
         else
-            System.out.println("BOG and RGD Latour zijn niet verbonden!");
+            System.out.println(vertexA + " en " +  vertexE + " zijn niet verbonden!");
 
-        //Call getAdjacentVertex() voor naaste locaties
+        //Roept getAdjacentVertex() op voor naaste locaties
         List<Vertex> temp = graph.getAdjacentVertex(new Vertex("A", "BOG"));
         System.out.println("\n");
-        System.out.println("Naaste locaties van BOG zijn: ");
+        System.out.println("Naaste locaties van " + vertexA + " zijn: ");
         for (Vertex ver : temp) {
             System.out.println(ver);
         }
@@ -78,25 +78,25 @@ public class App {
         Dijkstra Path = new Dijkstra();
         Path.computePaths(vertexA);
 
-        System.out.println("\n");
+
         System.out.println("Dijkstra");
         System.out.println("Minimale Afstanden: ");
 
-        System.out.println("van BOG naar RGD Meerzorg: " + vertexB.getWeight());
-        System.out.println("van BOG naar RGD Limesgracht: " + vertexC.getWeight());
-        System.out.println("van BOG naar RGD Lelydorp: " + vertexD.getWeight());
-        System.out.println("van BOG naar RGD Latour: " + vertexE.getWeight());
-        //System.out.println("van BOG naar RGD Zanderij: " + vertexF.getWeight());
+        System.out.println("van " + vertexA + " naar " + vertexB + ":" + vertexB.getWeight());
+        System.out.println("van " + vertexA + " naar " + vertexC + ":" + vertexC.getWeight());
+        System.out.println("van " + vertexA + " naar " + vertexD + ":" + vertexD.getWeight());
+        System.out.println("van " + vertexA + " naar " + vertexE + ":" + vertexE.getWeight());
+        //System.out.println("van " + vertexA + " naar " + vertexF + ":" + vertexF.getWeight());
 
         System.out.println("\n");
         System.out.println("Korste route:");//kortste route
         //System.out.println("Langste route");//langste route
 
-        System.out.println("van BOG naar RGD Meerzorg: " + Path.getPathTo(vertexB));
-        System.out.println("van BOG naar RGD Limesgracht: " + Path.getPathTo(vertexC));
-        System.out.println("van BOG naar RGD Lelydorp: " + Path.getPathTo(vertexD));
-        System.out.println("van BOG naar RGD Latour: " + Path.getPathTo(vertexE));
-        //System.out.println("van BOG naar RGD Zanderij: " + Path.getPathTo(vertexF));
+        System.out.println("van " + vertexA + " naar " + vertexB + ":" + Path.getPathTo(vertexB));
+        System.out.println("van " + vertexA + " naar " + vertexC + ":" + Path.getPathTo(vertexC));
+        System.out.println("van " + vertexA + " naar " + vertexD + ":" + Path.getPathTo(vertexD));
+        System.out.println("van " + vertexA + " naar " + vertexE + ":" + Path.getPathTo(vertexE));
+        //System.out.println("van " + vertexA + " naar " + vertexF + ":" + Path.getPathTo(vertexF));
 
         //DFS
         System.out.println("");
