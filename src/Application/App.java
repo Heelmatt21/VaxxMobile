@@ -99,7 +99,7 @@ public class App {
         //System.out.println("van " + vertexA + " naar " + vertexF + ":" + Path.getPathTo(vertexF));
 
         //DFS
-        System.out.println("");
+        System.out.println("\n");
         System.out.println("Output of Depth First Search: ");
         DFS(graph, new Vertex("A", "BOG"));
 
