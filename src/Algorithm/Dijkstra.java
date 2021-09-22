@@ -23,7 +23,7 @@ public class Dijkstra {
                     double newWeight = actualVertex.getWeight() + edge.getWeight();
 
                     if (newWeight < v.getWeight()) //Kortste route
-                    //if(newDistance > v.getWeight() ) //langste route
+                    //if(newWeight > v.getWeight() ) //langste route
                     {
                         priorityQueue.remove(v);
                         v.setWeight(newWeight);

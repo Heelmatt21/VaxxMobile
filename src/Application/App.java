@@ -29,6 +29,9 @@ public class App {
         graph.addVertex(vertexD);
         Vertex vertexE = new Vertex("E", "RGD Latour");
         graph.addVertex(vertexE);
+        //Vertex vertexF = new Vertex("F", "RGD Zanderij");
+        //graph.addVertex(vertexF);
+
 
         //weight
         vertexA.addNeighbour(new Edge("A", 11, vertexA, vertexB));
@@ -36,6 +39,7 @@ public class App {
         vertexB.addNeighbour(new Edge("B", 21, vertexB, vertexD));
         vertexB.addNeighbour(new Edge("B", 10, vertexB, vertexE));
         vertexC.addNeighbour(new Edge("C", 5, vertexC, vertexE));
+        //vertexD.addNeighbour(new Edge("D", 30, vertexD, vertexF));
         vertexE.addNeighbour(new Edge("E", 12, vertexE, vertexD));
 
         //directed graphs
@@ -44,6 +48,7 @@ public class App {
         graph.addEdge(vertexB, vertexD, graph.isDirected);
         graph.addEdge(vertexB, vertexE, graph.isDirected);
         graph.addEdge(vertexC, vertexE, graph.isDirected);
+        //graph.addEdge(vertexD, vertexF, graph.isDirected);
         graph.addEdge(vertexE, vertexD, graph.isDirected);
 
         //directed graph of niet
@@ -80,16 +85,18 @@ public class App {
         System.out.println("van BOG naar RGD Meerzorg: " + vertexB.getWeight());
         System.out.println("van BOG naar RGD Limesgracht: " + vertexC.getWeight());
         System.out.println("van BOG naar RGD Lelydorp: " + vertexD.getWeight());
-        System.out.println("van BOG naar Latour: " + vertexE.getWeight());
+        System.out.println("van BOG naar RGD Latour: " + vertexE.getWeight());
+        //System.out.println("van BOG naar RGD Zanderij: " + vertexF.getWeight());
 
         System.out.println("\n");
         System.out.println("Korste route:");//kortste route
-        //System.out.println("Langste route");/langste route
+        //System.out.println("Langste route");//langste route
 
         System.out.println("van BOG naar RGD Meerzorg: " + Path.getPathTo(vertexB));
         System.out.println("van BOG naar RGD Limesgracht: " + Path.getPathTo(vertexC));
         System.out.println("van BOG naar RGD Lelydorp: " + Path.getPathTo(vertexD));
         System.out.println("van BOG naar RGD Latour: " + Path.getPathTo(vertexE));
+        //System.out.println("van BOG naar RGD Zanderij: " + Path.getPathTo(vertexF));
 
         //DFS
         System.out.println("");
